@@ -112,6 +112,10 @@ a { color: inherit; }
   --gris:        #4A4C50;   /* texto secundario sobre claro      */
   --gris-suave:  #C9C6BE;   /* filetes y texto secundario oscuro */
 
+  /* Ancho de la columna de fotografía. Lo comparten las cuatro secciones
+     con foto, así todas caen sobre la misma vertical. */
+  --columna-foto: clamp(16rem, 28vw, 22rem);
+
   color-scheme: light;
 }
 
@@ -490,9 +494,7 @@ a:hover { text-decoration-color: var(--acento); }
 /* 09 · La firma ════════════════════════════════════════════════════════════
    Los cuatro verbos van sin filetes ni numeración: no son una secuencia.    */
 
-.firma__reja { display: grid; gap: clamp(2.5rem, 6vw, 4rem); }
-
-.firma__intro .entrada { margin-top: 1.25rem; }
+.reja-foto__texto .entrada { margin-top: 1.25rem; }
 
 .firma__parrafo {
   margin-top: 1.25rem;
@@ -521,19 +523,14 @@ a:hover { text-decoration-color: var(--acento); }
   .definiciones { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+/* Los cuatro verbos van bajo la rejilla de foto, a todo el ancho */
+.definiciones--cuatro { margin-top: clamp(2.5rem, 6vw, 4rem); }
+
 @media (min-width: 62rem) {
-  /* El texto ocupa las dos filas de la izquierda; a la derecha van los
-     verbos y, debajo, la fotografía. Así las dos columnas cierran a la
-     misma altura en vez de dejar un hueco. */
-  .firma__reja {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-    column-gap: clamp(3rem, 7vw, 6rem);
-    row-gap: clamp(2.5rem, 5vw, 3.5rem);
-    align-items: start;
+  .definiciones--cuatro {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(1.5rem, 3vw, 2.5rem);
   }
-  .firma__intro  { grid-column: 1; grid-row: 1 / span 2; }
-  .definiciones  { grid-column: 2; grid-row: 1; }
-  .firma__figura { grid-column: 2; grid-row: 2; margin-top: 0; }
 }
 
 
@@ -611,9 +608,7 @@ a:hover { text-decoration-color: var(--acento); }
    real, así que van en <ol>; el orden se lee en la disposición y en el
    filete, no en dígitos decorativos.                                        */
 
-.fuero__reja { display: grid; gap: clamp(2.5rem, 6vw, 4rem); }
 
-.fuero__texto .entrada { margin-top: 1.25rem; }
 
 .cita {
   margin-top: clamp(2rem, 4vw, 2.75rem);
@@ -633,11 +628,7 @@ a:hover { text-decoration-color: var(--acento); }
   max-width: 58ch;
 }
 
-.fuero__figura { margin: 0; }
-
-.fuero__figura img { width: 100%; }
-
-.pasos { display: grid; gap: 0; }
+.pasos { margin-top: clamp(2.5rem, 6vw, 4rem); display: grid; gap: 0; }
 
 .pasos li {
   border-top: 1px solid var(--linea);
@@ -653,26 +644,12 @@ a:hover { text-decoration-color: var(--acento); }
 }
 
 @media (min-width: 62rem) {
-  .fuero__reja {
-    grid-template-columns: minmax(0, 1fr) clamp(16rem, 28vw, 22rem);
-    column-gap: clamp(2.5rem, 6vw, 5rem);
-    row-gap: clamp(2.5rem, 5vw, 4rem);
-    align-items: start;
+  /* Los cuatro pasos van bajo la rejilla de foto, en dos columnas */
+  .pasos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(2rem, 5vw, 4rem);
   }
-  .fuero__texto { grid-column: 1; }
-  .pasos { grid-column: 1; }
-  .cierre--ancho { grid-column: 1; }
-
-  /* La foto acompaña en alto a las dos filas de texto en vez de dejar un
-     hueco debajo. */
-  .fuero__figura {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    align-self: stretch;
-    min-height: 100%;
-  }
-  .fuero__figura picture { display: block; height: 100%; }
-  .fuero__figura img { height: 100%; object-fit: cover; object-position: 50% 45%; }
+  .pasos li:nth-last-child(-n+2) { border-bottom: 1px solid var(--linea); }
 }
 
 
@@ -681,16 +658,28 @@ a:hover { text-decoration-color: var(--acento); }
    niveles igualados y viradas al negro cálido de la marca. Aquí solo se
    define cómo se comportan en la página; el tono viene ya en el archivo.   */
 
-.firma__figura,
-.instrumentos__figura,
-.casacion__figura {
-  margin: 0;
-  margin-top: clamp(2rem, 4vw, 2.5rem);
+/* La rejilla que comparten las cuatro secciones con fotografía: texto a la
+   izquierda, foto a la derecha, siempre del mismo ancho y con el mismo
+   borde. Al bajar por la página las cuatro caen sobre la misma vertical. */
+.reja-foto { display: grid; gap: clamp(2rem, 5vw, 2.75rem); }
+
+@media (min-width: 62rem) {
+  .reja-foto {
+    grid-template-columns: minmax(0, 1fr) var(--columna-foto);
+    column-gap: clamp(2.5rem, 6vw, 4.5rem);
+    align-items: start;
+  }
 }
 
-.firma__figura img,
-.instrumentos__figura img,
-.casacion__figura img { width: 100%; }
+/* Las cuatro comparten proporción: 4:5. Ya viene recortada en el archivo;
+   aquí solo se garantiza que ningún ancho la deforme. */
+.figura { margin: 0; }
+
+.figura img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
 
 /* Banda a sangre entre Socios y Contacto: repite el gesto de cierre del
    brochure. Es decorativa, por eso va con alt vacío. */
@@ -705,17 +694,6 @@ a:hover { text-decoration-color: var(--acento); }
 
 /* 12 · Instrumentos internos ═══════════════════════════════════════════════
    Rejilla de dos por dos, para que no repita el ritmo de «Servicios».       */
-
-.instrumentos__reja { display: grid; gap: clamp(1.5rem, 4vw, 2.5rem); }
-
-@media (min-width: 62rem) {
-  .instrumentos__reja {
-    grid-template-columns: minmax(0, 1fr) clamp(15rem, 24vw, 20rem);
-    column-gap: clamp(2.5rem, 6vw, 5rem);
-    align-items: end;
-  }
-  .instrumentos__figura { margin-top: 0; }
-}
 
 .definiciones--dos {
   margin-top: clamp(2.5rem, 6vw, 4rem);
@@ -823,8 +801,6 @@ a:hover { text-decoration-color: var(--acento); }
    verdadero diferencial de la firma, así que tiene sección propia y va
    inmediatamente después del otro diferencial.                              */
 
-.casacion__reja { display: grid; gap: clamp(1.5rem, 4vw, 2.5rem); }
-
 .casacion__lista {
   margin-block: clamp(1.5rem, 4vw, 2rem);
   display: grid;
@@ -849,14 +825,6 @@ a:hover { text-decoration-color: var(--acento); }
   border-top: 1px solid var(--linea);
   color: var(--texto-suave);
   max-width: 58ch;
-}
-
-@media (min-width: 52rem) {
-  .casacion__reja {
-    grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
-    column-gap: clamp(2rem, 5vw, 4rem);
-    align-items: start;
-  }
 }
 
 
@@ -1176,10 +1144,7 @@ body.con-barra .pie {
   .pie__bloque a[href^="tel:"],
   .pie__bloque a[href^="mailto:"] { min-height: 0; }
 
-  .fuero__figura,
-  .firma__figura,
-  .instrumentos__figura,
-  .casacion__figura { max-width: 11rem; }
+  .figura { max-width: 11rem; }
 
   .banda img { max-width: 22rem; }
 

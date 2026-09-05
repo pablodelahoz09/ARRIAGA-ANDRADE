@@ -103,8 +103,8 @@
 
   <!-- ── La firma ──────────────────────────────────────────────────────── -->
   <section class="seccion seccion--hueso" id="firma" aria-labelledby="firma-titulo">
-    <div class="contenedor firma__reja">
-      <div class="firma__intro">
+    <div class="contenedor reja-foto">
+      <div class="reja-foto__texto">
         <h2 id="firma-titulo">Una práctica diseñada para decisiones sensibles</h2>
         <p class="entrada">
           Acompañamos a empresas, gerencias, áreas jurídicas y áreas de talento
@@ -120,7 +120,22 @@
         </p>
       </div>
 
-      <dl class="definiciones">
+      <figure class="figura">
+        <picture>
+          <source type="image/webp"
+                  srcset="img/firma-380.webp 380w, img/firma-610.webp 610w"
+                  sizes="(min-width: 62rem) 22rem, calc(100vw - 2.5rem)">
+          <img src="img/firma-610.jpg"
+               srcset="img/firma-380.jpg 380w, img/firma-610.jpg 610w"
+               sizes="(min-width: 62rem) 22rem, calc(100vw - 2.5rem)"
+               width="610" height="762" loading="lazy" decoding="async"
+               alt="Manos revisando un documento sobre un escritorio.">
+        </picture>
+      </figure>
+    </div>
+
+    <div class="contenedor">
+      <dl class="definiciones definiciones--cuatro">
         <div class="definiciones__par">
           <dt>Prevenir</dt>
           <dd>Documentos, procesos y decisiones mejor soportadas.</dd>
@@ -139,21 +154,6 @@
         </div>
       </dl>
 
-      <figure class="firma__figura">
-        <picture>
-          <source type="image/webp"
-                  srcset="img/firma-480.webp 480w, img/firma-610.webp 610w"
-                  sizes="(min-width: 62rem) 24rem, calc(100vw - 2.5rem)">
-          <img src="img/firma-610.jpg"
-               srcset="img/firma-480.jpg 480w, img/firma-610.jpg 610w"
-               sizes="(min-width: 62rem) 24rem, calc(100vw - 2.5rem)"
-               width="610" height="508" loading="lazy" decoding="async"
-               alt="Manos revisando un documento sobre un escritorio.">
-        </picture>
-      </figure>
-    </div>
-
-    <div class="contenedor">
       <p class="mensaje">
         La gestión laboral no debe reaccionar ante el conflicto: debe anticiparlo,
         documentarlo y conducirlo estratégicamente.
@@ -240,8 +240,8 @@
   <!-- ── Instrumentos internos ─────────────────────────────────────────── -->
   <section class="seccion seccion--papel" id="instrumentos" aria-labelledby="instrumentos-titulo">
     <div class="contenedor">
-      <div class="instrumentos__reja">
-        <div class="instrumentos__intro">
+      <div class="reja-foto">
+        <div class="reja-foto__texto">
           <h2 id="instrumentos-titulo">Instrumentos laborales internos que deben revisarse</h2>
           <p class="entrada entrada--suelta">
             La actualización documental previene riesgos, protege la operación y
@@ -263,15 +263,15 @@
                ── fin del bloque a la espera de validación ──                -->
         </div>
 
-        <figure class="instrumentos__figura">
+    <figure class="figura">
           <picture>
             <source type="image/webp"
-                    srcset="img/instrumentos-400.webp 400w, img/instrumentos-664.webp 664w"
-                    sizes="(min-width: 62rem) 20rem, calc(100vw - 2.5rem)">
-            <img src="img/instrumentos-664.jpg"
-                 srcset="img/instrumentos-400.jpg 400w, img/instrumentos-664.jpg 664w"
-                 sizes="(min-width: 62rem) 20rem, calc(100vw - 2.5rem)"
-                 width="664" height="664" loading="lazy" decoding="async"
+                    srcset="img/instrumentos-380.webp 380w, img/instrumentos-531.webp 531w"
+                    sizes="(min-width: 62rem) 22rem, calc(100vw - 2.5rem)">
+            <img src="img/instrumentos-531.jpg"
+                 srcset="img/instrumentos-380.jpg 380w, img/instrumentos-531.jpg 531w"
+                 sizes="(min-width: 62rem) 22rem, calc(100vw - 2.5rem)"
+                 width="531" height="664" loading="lazy" decoding="async"
                  alt="Documentos y expedientes sobre una mesa de trabajo.">
           </picture>
         </figure>
@@ -303,8 +303,8 @@
 
   <!-- ── Primer diferencial: fuero sindical ────────────────────────────── -->
   <section class="seccion seccion--tinta fuero" id="fuero" aria-labelledby="fuero-titulo">
-    <div class="contenedor fuero__reja">
-      <div class="fuero__texto">
+    <div class="contenedor reja-foto">
+      <div class="reja-foto__texto">
         <p class="cintillo">Énfasis diferencial</p>
         <h2 id="fuero-titulo">Levantamiento judicial de fueros sindicales</h2>
         <p class="entrada">
@@ -323,19 +323,21 @@
         </p>
       </div>
 
-      <figure class="fuero__figura">
+      <figure class="figura">
         <picture>
           <source type="image/webp"
-                  srcset="img/fuero-480.webp 480w, img/fuero-574.webp 574w"
+                  srcset="img/fuero-380.webp 380w, img/fuero-610.webp 610w"
                   sizes="(min-width: 62rem) 22rem, calc(100vw - 2.5rem)">
-          <img src="img/fuero-574.jpg"
-               srcset="img/fuero-480.jpg 480w, img/fuero-574.jpg 574w"
+          <img src="img/fuero-610.jpg"
+               srcset="img/fuero-380.jpg 380w, img/fuero-610.jpg 610w"
                sizes="(min-width: 62rem) 22rem, calc(100vw - 2.5rem)"
-               width="574" height="990" loading="lazy" decoding="async"
+               width="610" height="762" loading="lazy" decoding="async"
                alt="Revisión de documentos laborales sobre un escritorio.">
         </picture>
       </figure>
+    </div>
 
+    <div class="contenedor">
       <ol class="pasos">
         <li>
           <h3>Valoración de la conducta</h3>
@@ -356,7 +358,7 @@
         </li>
       </ol>
 
-      <p class="cierre cierre--ancho">
+      <p class="cierre">
         <a class="enlace-fuerte" href="#contacto">Consultar un caso de fuero sindical</a>
       </p>
     </div>
@@ -364,26 +366,10 @@
 
   <!-- ── Segundo diferencial: casación ─────────────────────────────────── -->
   <section class="seccion seccion--hueso casacion" id="casacion" aria-labelledby="casacion-titulo">
-    <div class="contenedor casacion__reja">
-      <div class="casacion__titulo">
+    <div class="contenedor reja-foto">
+      <div class="reja-foto__texto">
         <h2 id="casacion-titulo">Casación laboral</h2>
-
-        <figure class="casacion__figura">
-          <picture>
-            <source type="image/webp"
-                    srcset="img/casacion-400.webp 400w, img/casacion-522.webp 522w"
-                    sizes="(min-width: 52rem) 20rem, calc(100vw - 2.5rem)">
-            <img src="img/casacion-522.jpg"
-                 srcset="img/casacion-400.jpg 400w, img/casacion-522.jpg 522w"
-                 sizes="(min-width: 52rem) 20rem, calc(100vw - 2.5rem)"
-                 width="522" height="540" loading="lazy" decoding="async"
-                 alt="Reunión de trabajo alrededor de una mesa.">
-          </picture>
-        </figure>
-      </div>
-
-      <div class="casacion__cuerpo">
-        <p class="entrada">
+        <p class="entrada entrada--suelta">
           Actuación ante la Sala de Casación Laboral de la Corte Suprema de Justicia:
           elaboración de demandas de casación y oposición a demandas de casación.
         </p>
@@ -394,6 +380,19 @@
         <p class="casacion__nota">Estrategia argumentativa, técnica procesal y análisis
            jurisprudencial para asuntos ante la Corte Suprema de Justicia.</p>
       </div>
+
+      <figure class="figura">
+        <picture>
+          <source type="image/webp"
+                  srcset="img/casacion-380.webp 380w, img/casacion-500.webp 500w"
+                  sizes="(min-width: 62rem) 22rem, calc(100vw - 2.5rem)">
+          <img src="img/casacion-500.jpg"
+               srcset="img/casacion-380.jpg 380w, img/casacion-500.jpg 500w"
+               sizes="(min-width: 62rem) 22rem, calc(100vw - 2.5rem)"
+               width="500" height="625" loading="lazy" decoding="async"
+               alt="Volúmenes encuadernados sobre un escritorio de madera.">
+        </picture>
+      </figure>
     </div>
   </section>
 
