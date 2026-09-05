@@ -15,6 +15,7 @@
    09 · La firma
    10 · Servicios
    11 · Fuero sindical
+   11b· Fotografía (reglas comunes)
    12 · Instrumentos internos
    13 · Metodología
    13b· Casación
@@ -611,8 +612,47 @@ a:hover { text-decoration-color: var(--acento); }
 }
 
 
+/* 11b · Fotografía ═════════════════════════════════════════════════════════
+   Las seis fotografías del brochure comparten tratamiento: blanco y negro,
+   niveles igualados y viradas al negro cálido de la marca. Aquí solo se
+   define cómo se comportan en la página; el tono viene ya en el archivo.   */
+
+.firma__figura,
+.instrumentos__figura,
+.casacion__figura {
+  margin: 0;
+  margin-top: clamp(2rem, 4vw, 2.5rem);
+}
+
+.firma__figura img,
+.instrumentos__figura img,
+.casacion__figura img { width: 100%; }
+
+/* Banda a sangre entre Socios y Contacto: repite el gesto de cierre del
+   brochure. Es decorativa, por eso va con alt vacío. */
+.banda { margin: 0; }
+
+.banda img {
+  width: 100%;
+  height: clamp(8rem, 20vw, 15rem);
+  object-fit: cover;
+  object-position: 50% 42%;
+}
+
+
 /* 12 · Instrumentos internos ═══════════════════════════════════════════════
    Rejilla de dos por dos, para que no repita el ritmo de «Servicios».       */
+
+.instrumentos__reja { display: grid; gap: clamp(1.5rem, 4vw, 2.5rem); }
+
+@media (min-width: 62rem) {
+  .instrumentos__reja {
+    grid-template-columns: minmax(0, 1fr) clamp(15rem, 24vw, 20rem);
+    column-gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: end;
+  }
+  .instrumentos__figura { margin-top: 0; }
+}
 
 .definiciones--dos {
   margin-top: clamp(2.5rem, 6vw, 4rem);
@@ -739,6 +779,17 @@ a:hover { text-decoration-color: var(--acento); }
     grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
     column-gap: clamp(2rem, 5vw, 4rem);
     align-items: start;
+  }
+}
+
+@media (min-width: 62rem) {
+  /* En escritorio la foto se recorta en altura para cerrar a la par de los
+     cuatro verbos de la columna derecha; en vertical dejaba un hueco. */
+  .firma__figura { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+  .firma__figura img {
+    height: clamp(15rem, 24vw, 20rem);
+    object-fit: cover;
+    object-position: 50% 32%;
   }
 }
 
@@ -1039,7 +1090,12 @@ body.con-barra .pie {
   .pie__bloque a[href^="tel:"],
   .pie__bloque a[href^="mailto:"] { min-height: 0; }
 
-  .fuero__figura { max-width: 12rem; }
+  .fuero__figura,
+  .firma__figura,
+  .instrumentos__figura,
+  .casacion__figura { max-width: 11rem; }
+
+  .banda img { height: 5rem; }
 
   .filete { animation: none; }
 }
