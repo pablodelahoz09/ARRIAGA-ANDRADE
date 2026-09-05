@@ -392,3 +392,89 @@ con la marca y «Contacto».
 
 Sin scroll horizontal a 360, 430, 992, 1120 y 1440 px. Ningún enlace por debajo
 de 44 px. Un solo `h1`, jerarquía de encabezados sin saltos. Consola limpia.
+
+---
+
+## 11. Contenido v2 (5 de septiembre de 2026)
+
+### Lo que cambió
+
+- **Portada.** El descriptor vuelve al del brochure. La credencial de la
+  primera pantalla deja de ser «más de 50 años» y pasa a ser la frase
+  verificable y concreta: un socio fue magistrado de la Sala Laboral del
+  Tribunal Superior de Bogotá, el otro dirigió el área laboral de una gran
+  operación de retail.
+- **Precisión en la credencial de Héctor.** Ya no se dice «más de 50 años en
+  casación». Se dice lo exacto: en ejercicio desde 1970, y más de treinta y
+  cinco años dedicados a la casación. La cifra real no necesitaba inflarse.
+- **La firma** gana el párrafo de los recorridos complementarios y cierra con
+  el mensaje clave del brochure, que antes abría Metodología.
+- **Sección nueva: «Cuándo conviene llamarnos».** Rescatada del sitio
+  anterior. Es la única sección que le describe al lector su propia situación
+  en vez de describir a la firma, y por eso es la única que es solo una lista,
+  sin descripciones colgando.
+- **Servicios pasan de cinco a seis.** Entra Seguridad social, que antes se
+  prometía en el titular y no existía en la lista.
+- **Fuero sindical** gana el párrafo que explica ante quién se litiga y por
+  qué la judicatura previa cambia la lectura del caso.
+- **Socios reescritos.** Era la sección más débil del sitio; ahora es la más
+  sustanciosa. Cada socio lleva una línea de credenciales y su trayectoria
+  real.
+- **Sección nueva: Cobertura nacional.**
+- **Pie**: se añade «Atención en todo el país» y quedan marcados los huecos de
+  dirección, razón social, NIT, LinkedIn y política de datos.
+
+### Lo que se dejó sin publicar, a propósito
+
+- **El párrafo sobre la Ley 2466 de 2025** está escrito pero entre comentarios
+  en `index.html`. Es una afirmación jurídica con fechas y alcances concretos:
+  la tiene que validar un socio antes de que aparezca. El sitio está en línea
+  y es público; publicar normativa sin firma profesional es exactamente el
+  riesgo que este encargo prohibía.
+- **Los porcentajes de éxito del sitio anterior** (más del 90 % y más del
+  95 %) no se trasladaron. No son verificables por el lector y bordean la
+  promesa de resultado.
+- **Los tres servicios adicionales** del sitio anterior quedan como comentario
+  dentro de Servicios, a la espera de que la firma diga si siguen vigentes.
+
+### Una contradicción que hay que resolver
+
+En una instrucción anterior se dijo que **los dos teléfonos tienen WhatsApp**.
+El brief de contenido v2 dice que solo está confirmado el primero, porque es
+el que enlazaba el sitio anterior, y advierte que anunciar un WhatsApp que no
+responde es peor que no ofrecerlo. Se aplicó lo más prudente: **WhatsApp solo
+en el primer número**. Restaurar el segundo es copiar una línea.
+
+### Composición
+
+Con dos secciones nuevas el ritmo de superficies queda:
+
+`negro · hueso · blanco · hueso · blanco · negro · hueso · blanco · hueso ·
+blanco · foto a sangre · negro`
+
+«La firma» se recompuso: el texto ocupa las dos filas de la izquierda, y a la
+derecha van los cuatro verbos y debajo la fotografía. Antes la foto colgaba
+del texto y dejaba media página vacía a la derecha.
+
+### Verificación
+
+Sin scroll horizontal a 390 ni a 1120 px. Ningún enlace por debajo de 44 px.
+Un solo `h1`, jerarquía de encabezados sin saltos. Peor contraste de texto de
+toda la página: **7.43:1** (el mínimo AA es 4.5). 23 comentarios HTML, ninguno
+con guiones dobles que rompan el parseo. Etiquetas correctamente anidadas.
+JSON-LD válido. Consola limpia.
+
+### Sobre los dos puntos «pendientes de la revisión anterior»
+
+El brief los da por pendientes; están resueltos y medidos:
+
+- **Menú.** Se rompió de verdad al añadir «Casación» como sexta entrada: a
+  992 px «La firma» y «Fuero sindical» se partían en dos líneas. Corregido con
+  `white-space: nowrap` y subiendo el punto de corte de 62rem a 70rem, que es
+  el ancho medido que necesitan las seis entradas más la marca y «Contacto».
+  A 1120 px quedan 77 px de aire a la izquierda y 44 a la derecha.
+- **Contraste de titulares.** No había ningún titular gris: son `#1A1D22`
+  sobre claro o `#F1EEE7` sobre `#1A1D22`, entre 14.6:1 y 16.6:1. El
+  diagnóstico venía de un PDF impreso sin fondos de color, donde el texto
+  hueso quedaba a 1.06:1. Se añadió hoja de estilo de impresión para que eso
+  no vuelva a pasar.

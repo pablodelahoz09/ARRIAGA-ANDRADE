@@ -207,50 +207,66 @@ Para apagarlo, vuelva a la Terminal y presione `Control + C`.
 
 ## 10. Lo que falta pedirle a la firma
 
-El sitio está completo con la información que traía el brochure. Estas son las
-piezas que hoy no existen y que sí publican todas las firmas de referencia. Cada
-una tiene ya su lugar marcado con un comentario dentro de `index.html`.
+Cada punto tiene ya su lugar marcado con un comentario dentro de `index.html`.
 
 **Bloquea la publicación**
 
-1. **Dominio de los correos:** ¿`.co` o `.com`? Provisionalmente están en `.co`.
-2. **Dirección definitiva del sitio**, para `canonical`, Open Graph y `sitemap.xml`.
-3. **De quién es cada teléfono y cuáles tienen WhatsApp activo.** Un número que
-   anuncia WhatsApp y no responde por ahí es peor que no ofrecerlo.
+1. **Dominio de los correos.** Hay **tres** variantes en circulación:
+   `felipe.arriaga@arriagaandrade.com` (brochure, lámina 8),
+   `felipe.arriaga@arriagaandrade.co` (brochure, lámina 9) y
+   `f.arriaga@arriagaandradelaboralistas.com` (sitio anterior).
+   Hay que saber cuál está activo. Un correo que rebota en la página de
+   contacto de un abogado es la peor falla posible. Provisionalmente están
+   los `.co`.
+2. **Qué pasa con el dominio viejo.** Si `arriagaandradelaboralistas.com` se
+   apaga sin redirección 301 al nuevo, se pierde lo que tenga indexado y
+   cualquier enlace que circule por ahí.
+3. **Dirección definitiva del sitio nuevo**, para `canonical`, Open Graph y
+   `sitemap.xml`.
+4. **De quién es cada teléfono.** Y si el segundo tiene WhatsApp: hoy solo
+   lleva WhatsApp el primero, que es el único confirmado porque el sitio
+   anterior lo enlazaba.
+5. **Visto bueno de un socio al párrafo sobre la Ley 2466 de 2025.** Está
+   escrito pero **sin publicar**, entre comentarios, en la sección de
+   instrumentos internos. Es una afirmación jurídica: la tiene que validar un
+   abogado antes de que aparezca. Cuando la validen, se borran las dos líneas
+   de comentario que la rodean.
+
+**Decisiones de contenido**
+
+6. **Público objetivo.** El brochure habla de empresas, gerencias y áreas
+   jurídicas; el sitio anterior hablaba de pymes de 10 a 200 empleados. No es
+   el mismo cliente. El sitio hoy sigue el brochure. Confírmelo.
+7. **Los porcentajes de éxito del sitio anterior** (más del 90 % en
+   contestaciones, más del 95 % en levantamiento de fuero) **no se pasaron**.
+   No son verificables por el lector y bordean la promesa de resultado, que
+   el régimen disciplinario del abogado trata con severidad. Si la firma
+   quiere conservarlos, tiene que poder sustentarlos y acotarlos: universo,
+   periodo y quién los mide.
+8. **Tres servicios del sitio anterior quedaron fuera** a la espera de
+   confirmación: autorizaciones para trabajadores extranjeros, sistemas de
+   gestión de seguridad y salud en el trabajo, y manejo integral de
+   departamentos de recursos humanos. ¿Siguen vigentes?
+9. **Qué es el diagnóstico laboral inicial:** duración, costo, qué recibe la
+   empresa al final y en cuánto responde la firma.
+10. **Confirmar que Felipe ya no está en Cencosud.** El texto dice «entre 2013
+    y 2026» y 2026 es este año.
 
 **Mejora mucho el sitio**
 
-4. **Retratos de los dos socios**, en blanco y negro, mismo encuadre y misma luz.
-   En una firma de dos abogados el retrato es la prueba de que la firma existe.
-5. **Hojas de vida de los socios:** universidad, especialización, docencia,
-   membresías gremiales, publicaciones, cargos anteriores, idiomas.
-6. **Dirección de la oficina** y si atiende presencialmente.
-7. **Razón social y NIT** para el pie.
-8. **LinkedIn** de la firma o de los socios.
-9. **Qué es exactamente el diagnóstico laboral inicial:** duración, costo y qué
-   recibe la empresa al final. Hoy se describe pero no se dice qué entrega.
-10. **Sectores o tipos de empresa** que atiende. Sin nombrar clientes.
+11. **Retratos de los dos socios.** Blanco y negro, mismo fondo, misma luz,
+    mismo encuadre a la altura del pecho. **Los dos o ninguno:** un socio con
+    foto y el otro sin ella se lee como jerarquía involuntaria.
+12. **Dirección de la oficina**, razón social, NIT y LinkedIn para el pie.
+13. **Sectores o tipos de empresa** que atiende, sin nombrar clientes.
+14. **¿Notas periódicas o preguntas frecuentes?** Un blog con la última
+    entrada de hace dos años hace más daño que no tenerlo.
+15. **¿Versión en inglés?**
 
-**Decisiones pendientes**
+**Decisiones pendientes de diseño**
 
-11. La **barra inferior de móvil**: encenderla o borrarla.
-12. **Un bloque sobre la reforma laboral.** Es probablemente la razón principal
-    por la que una empresa está buscando abogado laboral ahora mismo, y la
-    sección de instrumentos internos es donde encaja. **Lo tienen que redactar
-    o validar los socios**, con fecha visible: no es contenido que podamos
-    escribir nosotros ni copiar de un resumen de terceros.
-13. **¿Notas periódicas o preguntas frecuentes?** Un blog con la última entrada
-    de hace dos años hace más daño que no tenerlo. Si no van a escribir con
-    regularidad, mejor una sección de preguntas frecuentes, que no envejece.
-14. **¿Versión en inglés?** Buena parte del mercado laboral corporativo
-    colombiano son multinacionales cuyo director jurídico regional lee en inglés.
-15. **El nombre de la firma.** Conviene preguntarle a la firma si hay alguna
-    relación —parentesco, discipulado, homenaje— detrás del nombre, y qué quieren
-    decir al respecto. Cualquier afirmación de ese tipo tiene que venir de ellos
-    por escrito: no se puede publicar en el sitio de un abogado un dato de
-    trayectoria que nosotros no podamos verificar.
-
----
+16. La **barra inferior de móvil**: encenderla o borrarla.
+17. **Las fotografías.** Ver el punto 13 de este documento.
 
 ## 11. Nota sobre imprimir el sitio
 
@@ -315,3 +331,55 @@ línea `og:image` por:
 ```
 
 y acuérdese de devolverla al dominio real antes de publicar de verdad.
+
+---
+
+## 13. Las fotografías: qué se revisó y qué falta decidir
+
+### Las once imágenes del sitio anterior no sirven
+
+Se descargaron todas —`1.png` a `9.png`, la del hero y la de Getty— y se
+revisaron una por una. Están en la carpeta `imagenes-sitio-anterior/`, **fuera
+de lo que se publica**. Conclusión: ninguna es usable.
+
+- **`1.png` a `8.png`** son ocho variaciones de la misma escena: gente en
+  traje azul alrededor de una mesa de juntas de madera, con ventanal. Están a
+  780 × 520 píxeles, demasiado pequeñas, y son exactamente el género que este
+  proyecto descartó desde el principio: «equipo sonriendo en sala de juntas».
+- **`9.png`** es un lobby de oficina vacío, también generado por IA.
+- **La del hero** es una estatuilla de la balanza de la justicia sobre un
+  libro. Es el cliché más previsible del oficio.
+- **La de Getty** (`611765652`) es la única fotografía real —tomada con una
+  Nikon D810— y precisamente por eso es la que tiene una licencia de terceros
+  inequívoca.
+
+Todas están en color y en tonos cálidos, cuando la identidad de la firma es
+blanco y negro al carbón. Traerlas sería un retroceso.
+
+### La pregunta de licencias sigue abierta
+
+Las seis fotografías que hoy usa el sitio vienen del brochure y **parecen
+generadas por inteligencia artificial**: los documentos tienen texto ilegible
+y las manos presentan anomalías. Antes de publicar hay que preguntarle a la
+firma de dónde salieron y si tiene licencia propia.
+
+Tres caminos limpios, en orden:
+
+1. **Fotografías reales de los socios y de la oficina.** Es lo mejor por
+   razones que van más allá de la licencia.
+2. **Banco de imágenes con licencia comprada a nombre de la firma.**
+3. **Ninguna fotografía de archivo:** solo tipografía, aire y el monograma.
+   Para una firma sobria de dos abogados es una opción digna, y bastante más
+   elegante que el archivo genérico.
+
+Si eligen la tercera, quitar las fotos es rápido: se borran los bloques
+`<figure>` de `index.html` y el apartado 11b de `styles.css`.
+
+### Si finalmente se usan fotografías
+
+- Blanco y negro real, contraste alto. Nada de virados cálidos.
+- Mismo tratamiento en todas.
+- Encuadre en el detalle —manos, documentos, el borde de una mesa—, nunca
+  personas mirando a cámara.
+- Recorte decidido a mano, no escalado automático.
+- Nunca más de 200 KB por archivo. Las de hoy no pasan de 16 KB.

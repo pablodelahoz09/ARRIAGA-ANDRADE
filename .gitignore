@@ -7,3 +7,7 @@
 # repositorio público. Para incluirlos, borre estas dos líneas.
 REFERENCIAS/
 *.pptx
+
+# Imágenes descargadas del sitio anterior: son para inspección, no se publican.
+# Ver PLAN-DE-DISENO.md, apartado 11.
+imagenes-sitio-anterior/

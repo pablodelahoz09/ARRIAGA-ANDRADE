@@ -13,12 +13,14 @@
    07 · Cabecera y navegación
    08 · Portada
    09 · La firma
+   09b· Riesgos frecuentes
    10 · Servicios
    11 · Fuero sindical
    11b· Fotografía (reglas comunes)
    12 · Instrumentos internos
    13 · Metodología
    13b· Casación
+   13c· Cobertura
    14 · Socios
    15 · Contacto
    16 · Pie
@@ -205,6 +207,11 @@ p { text-wrap: pretty; }
 
 .seccion {
   padding-block: clamp(3.25rem, 1.5rem + 7.5vw, 7.5rem);
+}
+
+/* Para secciones de dos líneas, que no piden el aire de una sección entera */
+.seccion--angosta {
+  padding-block: clamp(2.5rem, 1.25rem + 3.5vw, 4rem);
 }
 
 /* Deja aire bajo la cabecera fija al saltar a un ancla */
@@ -487,6 +494,12 @@ a:hover { text-decoration-color: var(--acento); }
 
 .firma__intro .entrada { margin-top: 1.25rem; }
 
+.firma__parrafo {
+  margin-top: 1.25rem;
+  color: var(--texto-suave);
+  max-width: 62ch;
+}
+
 .definiciones {
   display: grid;
   gap: clamp(1.75rem, 4vw, 2.5rem);
@@ -509,11 +522,56 @@ a:hover { text-decoration-color: var(--acento); }
 }
 
 @media (min-width: 62rem) {
+  /* El texto ocupa las dos filas de la izquierda; a la derecha van los
+     verbos y, debajo, la fotografía. Así las dos columnas cierran a la
+     misma altura en vez de dejar un hueco. */
   .firma__reja {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-    gap: clamp(3rem, 7vw, 6rem);
+    column-gap: clamp(3rem, 7vw, 6rem);
+    row-gap: clamp(2.5rem, 5vw, 3.5rem);
     align-items: start;
   }
+  .firma__intro  { grid-column: 1; grid-row: 1 / span 2; }
+  .definiciones  { grid-column: 2; grid-row: 1; }
+  .firma__figura { grid-column: 2; grid-row: 2; margin-top: 0; }
+}
+
+
+/* 09b · Riesgos frecuentes ════════════════════════════════════════════════
+   La única sección que le habla al lector de su propia situación en vez de
+   hablar de la firma. Por eso es la única que es solo una lista, sin
+   descripciones colgando de cada punto.                                     */
+
+.riesgos {
+  margin-top: clamp(2rem, 5vw, 3rem);
+  display: grid;
+  gap: 0;
+}
+
+.riesgos li {
+  border-top: 1px solid var(--linea);
+  padding-block: clamp(0.875rem, 2vw, 1.125rem);
+  padding-left: 1.75rem;
+  position: relative;
+  max-width: 48ch;
+}
+
+.riesgos li:last-child { border-bottom: 1px solid var(--linea); }
+
+.riesgos li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--acento);
+}
+
+@media (min-width: 46rem) {
+  .riesgos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(2rem, 5vw, 4rem);
+  }
+  /* En dos columnas, el filete inferior lo llevan los dos últimos */
+  .riesgos li:nth-last-child(-n+2) { border-bottom: 1px solid var(--linea); }
 }
 
 
@@ -567,6 +625,12 @@ a:hover { text-decoration-color: var(--acento); }
   font-size: clamp(1.3rem, 1.05rem + 1.1vw, 1.9rem);
   line-height: 1.28;
   max-width: 30ch;
+}
+
+.fuero__respaldo {
+  margin-top: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--texto-suave);
+  max-width: 58ch;
 }
 
 .fuero__figura { margin: 0; }
@@ -681,13 +745,27 @@ a:hover { text-decoration-color: var(--acento); }
 
 /* Mensaje clave del brochure. Abre Metodología porque es exactamente lo que
    la metodología ejecuta. */
+/* Mensaje clave del brochure. Cierra «La firma»: es la frase que resume la
+   postura de la práctica, así que va al final, no al principio. */
 .mensaje {
   font-size: clamp(1.3rem, 1.1rem + 1vw, 2rem);
   line-height: 1.25;
-  max-width: 30ch;
-  padding-bottom: clamp(1.75rem, 4vw, 2.5rem);
-  margin-bottom: clamp(2rem, 5vw, 3rem);
-  border-bottom: 1px solid var(--linea);
+  max-width: 34ch;
+  margin-inline: 0;
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  padding-top: clamp(1.75rem, 4vw, 2.5rem);
+  border-top: 1px solid var(--linea);
+}
+
+/* Aviso normativo. Hoy está sin publicar en index.html, a la espera del
+   visto bueno de un socio. */
+.aviso {
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+  padding-left: clamp(1rem, 2.5vw, 1.5rem);
+  border-left: 2px solid var(--acento);
+  font-size: 1rem;
+  color: var(--texto-suave);
+  max-width: 58ch;
 }
 
 
@@ -781,9 +859,12 @@ a:hover { text-decoration-color: var(--acento); }
   }
 }
 
-@media (min-width: 62rem) {
-  .firma__figura { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
-}
+
+
+
+/* 13c · Cobertura ══════════════════════════════════════════════════════════ */
+
+#cobertura .entrada { max-width: 46ch; }
 
 
 /* 14 · Socios ══════════════════════════════════════════════════════════════ */
@@ -798,11 +879,24 @@ a:hover { text-decoration-color: var(--acento); }
   font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
 }
 
-.socio p {
-  margin-top: 0.75rem;
-  color: var(--texto-suave);
-  max-width: 46ch;
+/* Las credenciales van en una línea propia bajo el nombre, no en una
+   versalita suelta: la sección ya se titula «Socios». */
+.socio__credenciales {
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: var(--acento);
+  max-width: 42ch;
 }
+
+.socio p {
+  margin-top: 0.875rem;
+  color: var(--texto-suave);
+  max-width: 52ch;
+}
+
+.socio .socio__credenciales + p { margin-top: 0; }
 
 @media (min-width: 46rem) {
   .socios { grid-template-columns: repeat(2, minmax(0, 1fr)); }
