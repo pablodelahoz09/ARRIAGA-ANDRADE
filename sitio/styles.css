@@ -471,11 +471,11 @@ a:hover { text-decoration-color: var(--acento); }
     align-self: stretch;
     min-height: 26rem;
     background-color: #14171b;
-    background-image: url("img/hero-610.jpg");
-    background-image: image-set(url("img/hero-610.webp") type("image/webp"),
-                                url("img/hero-610.jpg")  type("image/jpeg"));
+    background-image: url("img/hero-620.jpg");
+    background-image: image-set(url("img/hero-620.webp") type("image/webp"),
+                                url("img/hero-620.jpg")  type("image/jpeg"));
     background-size: cover;
-    background-position: 50% 42%;
+    background-position: 50% 50%;
   }
 }
 
@@ -634,9 +634,8 @@ a:hover { text-decoration-color: var(--acento); }
 
 .banda img {
   width: 100%;
-  height: clamp(8rem, 20vw, 15rem);
-  object-fit: cover;
-  object-position: 50% 42%;
+  height: auto;
+  aspect-ratio: 16 / 5;   /* la del archivo: no recorta a nadie en ningún ancho */
 }
 
 
@@ -783,14 +782,7 @@ a:hover { text-decoration-color: var(--acento); }
 }
 
 @media (min-width: 62rem) {
-  /* En escritorio la foto se recorta en altura para cerrar a la par de los
-     cuatro verbos de la columna derecha; en vertical dejaba un hueco. */
   .firma__figura { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
-  .firma__figura img {
-    height: clamp(15rem, 24vw, 20rem);
-    object-fit: cover;
-    object-position: 50% 32%;
-  }
 }
 
 
@@ -1095,7 +1087,7 @@ body.con-barra .pie {
   .instrumentos__figura,
   .casacion__figura { max-width: 11rem; }
 
-  .banda img { height: 5rem; }
+  .banda img { max-width: 22rem; }
 
   .filete { animation: none; }
 }
