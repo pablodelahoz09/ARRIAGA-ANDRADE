@@ -267,3 +267,51 @@ hojas.
 **Si alguien les manda un PDF del sitio que se ve casi en blanco, es que lo
 imprimió con una versión anterior o con una herramienta que ignora la hoja de
 impresión. No es un defecto del sitio.**
+
+---
+
+## 12. El sitio en GitHub
+
+El proyecto está en **github.com/pablodelahoz09/ARRIAGA-ANDRADE** y se publica
+solo cada vez que se sube un cambio.
+
+**Dirección para mostrarle el sitio al cliente:**
+`https://pablodelahoz09.github.io/ARRIAGA-ANDRADE/`
+
+Es gratis, va por HTTPS y sirve para que su amigo lo abra desde el celular
+antes de comprar hosting. No reemplaza al dominio definitivo.
+
+### Para subir un cambio
+
+Después de editar `index.html` o cualquier archivo de `sitio/`, abra la
+Terminal y escriba esto:
+
+```bash
+cd "/Users/pablodelahoz/Desktop/ARRIAGA ANDRADE" && git add -A && git commit -m "Cambio de textos" && git push
+```
+
+En medio minuto la dirección de arriba ya muestra el cambio. Puede cambiar
+«Cambio de textos» por lo que describa mejor lo que hizo.
+
+### Qué no está en GitHub, a propósito
+
+El brochure (`.pptx`) y la carpeta `REFERENCIAS` **no se suben**: el
+repositorio es público y ahí están los sitios completos de cuatro firmas
+competidoras. Siguen en la carpeta de su computador. La regla está en el
+archivo `.gitignore`; si algún día quiere incluirlos, borre esas dos líneas
+—y considere volver el repositorio privado primero—.
+
+### Un detalle de la dirección de prueba
+
+Las etiquetas para compartir por WhatsApp apuntan al dominio definitivo
+(`arriagaandrade.co`), que todavía no existe. Por eso, al compartir la
+dirección de prueba, WhatsApp muestra el título y la descripción pero **no la
+imagen**. No es un error: se arregla solo el día que el dominio esté activo.
+Si quiere ver también la imagen mientras tanto, cambie en `index.html` la
+línea `og:image` por:
+
+```html
+<meta property="og:image" content="https://pablodelahoz09.github.io/ARRIAGA-ANDRADE/img/og.jpg">
+```
+
+y acuérdese de devolverla al dominio real antes de publicar de verdad.
