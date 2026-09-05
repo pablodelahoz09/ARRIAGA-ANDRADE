@@ -1,0 +1,9 @@
+# Ruido de macOS
+.DS_Store
+
+# Insumos de trabajo: no se publican.
+# El brochure es material de la firma y REFERENCIAS son los sitios completos
+# de otras firmas. Se quedan en la carpeta del computador, fuera del
+# repositorio público. Para incluirlos, borre estas dos líneas.
+REFERENCIAS/
+*.pptx

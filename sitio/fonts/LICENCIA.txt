@@ -1,0 +1,21 @@
+TIPOGRAFÍAS DE ESTE SITIO
+=========================
+
+Libre Caslon Display
+  Diseño: Pablo Impallari y Rodrigo Fuenzalida (Impallari Type).
+  Licencia: SIL Open Font License, versión 1.1.
+  Origen: https://fonts.google.com/specimen/Libre+Caslon+Display
+
+Archivo
+  Diseño: Omnibus-Type (Héctor Gatti y equipo).
+  Licencia: SIL Open Font License, versión 1.1.
+  Origen: https://fonts.google.com/specimen/Archivo
+
+La SIL Open Font License 1.1 permite usar, incrustar y redistribuir estas
+fuentes, incluso en proyectos comerciales, siempre que no se vendan por
+separado y se conserve este aviso. Texto completo de la licencia:
+https://openfontlicense.org/open-font-license-official-text/
+
+Los archivos .woff2 de esta carpeta son subconjuntos (latin y latin-ext)
+descargados de Google Fonts y se sirven desde este mismo sitio: la página
+no hace ninguna petición a servidores de terceros.
