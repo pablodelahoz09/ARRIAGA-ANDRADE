@@ -88,6 +88,11 @@ baja que la Archivo, así que a igual cuerpo se ve más pequeña. Los `h3` estab
 quedando ópticamente por debajo de su propia descripción. Se subieron los `h3`
 y se bajó a 16 px el texto descriptivo que cuelga de ellos.
 
+> **Superado el 6/9/2026** — ver apartado 12. El cliente pidió una sola letra
+> en toda la página. La Archivo se retiró por completo; el razonamiento de
+> arriba queda como registro de por qué se había elegido, no como estado
+> actual del sitio.
+
 ---
 
 ## 4. Composición
@@ -478,3 +483,47 @@ El brief los da por pendientes; están resueltos y medidos:
   diagnóstico venía de un PDF impreso sin fondos de color, donde el texto
   hueso quedaba a 1.06:1. Se añadió hoja de estilo de impresión para que eso
   no vuelva a pasar.
+
+---
+
+## 12. Una sola tipografía en todo el sitio (6 de septiembre de 2026)
+
+El cliente pidió, en tres pasos sucesivos, que se retirara la mezcla de dos
+familias: primero para la ficha de los socios, después «usa la fuente de los
+títulos» para esa misma ficha, y finalmente, sin ambigüedad, **«toda la página
+toda con la letra de los títulos»**.
+
+### Qué cambió
+
+- El cuerpo de texto (`body`) pasa de Archivo a **Libre Caslon Display**, la
+  misma familia que ya tenían los títulos. Como nada más en la hoja de estilo
+  define su propia fuente salvo dos excepciones puntuales, este solo cambio
+  bastó para unificar la home entera: párrafos, cintillos, servicios,
+  metodología, pie de página, botones.
+- Las dos excepciones que sí forzaban la sans explícitamente —`.datos__rotulo`
+  y `.pie__rotulo`, los rótulos «TELÉFONOS», «CORREO», «CONTACTO»— se
+  corrigieron para que también hereden Caslon.
+- La familia Archivo se **retiró por completo**: sus dos `@font-face`, el
+  `<link rel="preload">` que la traía y los dos archivos `.woff2` (66 KB entre
+  los dos). Ya no la usa ni un solo elemento del sitio.
+- `fonts/LICENCIA.txt` se actualizó: ya no hay dos tipografías que licenciar,
+  sino una.
+
+### Una advertencia que se hizo antes de ejecutar, no después
+
+Libre Caslon Display es un corte **Display**: dibujado para titulares y textos
+grandes, no para párrafos largos de lectura corrida. Aplicado a los cuatro
+párrafos de la biografía de Héctor, por ejemplo, es más elegante que cómodo de
+leer a tamaño de texto normal. Se avisó explícitamente antes de extenderlo a
+toda la página, y el cliente reafirmó la instrucción («toda la página»), así
+que se ejecutó sin reservas. Sigue siendo una peculiaridad real del resultado,
+no un defecto oculto: si en el uso real la lectura de los párrafos largos se
+siente pesada, la corrección más simple es devolver **solo los párrafos de
+más de dos o tres líneas** —no los títulos, ni las etiquetas cortas— a una
+sans de lectura, sin tocar el resto.
+
+### Efecto colateral: menos peso
+
+Al quitar Archivo, la carga inicial de fuentes baja de dos familias a una.
+Con una sola familia autoalojada, el sitio sigue muy por debajo del
+presupuesto de 500 KB fijado desde el encargo original.

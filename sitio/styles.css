@@ -31,9 +31,10 @@
 
 
 /* 01 · Tipografías ═════════════════════════════════════════════════════════
-   Libre Caslon Display (Pablo Impallari / Rodrigo Fuenzalida) — titulares.
-   Archivo (Omnibus-Type) — texto corrido e interfaz.
-   Ambas con licencia SIL Open Font License 1.1. Ver fonts/LICENCIA.txt      */
+   Una sola familia en toda la página: Libre Caslon Display (Pablo Impallari /
+   Rodrigo Fuenzalida), la misma de los títulos. Antes el cuerpo de texto iba
+   en Archivo, una sans; el cliente pidió una sola letra en todo el sitio.
+   Licencia SIL Open Font License 1.1. Ver fonts/LICENCIA.txt                */
 
 @font-face {
   font-family: "Libre Caslon Display";
@@ -51,26 +52,6 @@
   font-weight: 400;
   font-display: swap;
   src: url("fonts/caslon-latin-ext.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
-                 U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF,
-                 U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "Archivo";
-  font-style: normal;
-  font-weight: 400 600;
-  font-display: swap;
-  src: url("fonts/archivo-latin.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-                 U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
-                 U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "Archivo";
-  font-style: normal;
-  font-weight: 400 600;
-  font-display: swap;
-  src: url("fonts/archivo-latin-ext.woff2") format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
                  U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF,
                  U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
@@ -157,7 +138,7 @@ body {
 /* 04 · Tipografía base ═════════════════════════════════════════════════════ */
 
 body {
-  font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Libre Caslon Display", Georgia, "Times New Roman", serif;
   font-size: 1.0625rem;            /* 17 px — nunca por debajo de 16 */
   line-height: 1.65;
   font-synthesis: none;
@@ -183,9 +164,9 @@ h2 {
   text-wrap: balance;
 }
 
-/* La Caslon tiene la altura de x más baja que la Archivo: a igual cuerpo
-   se ve más pequeña. Los h3 se suben para que el título pese más que su
-   propia descripción, que baja a 1rem. */
+/* h3 se sube por encima del cuerpo de texto para marcar jerarquía, aunque
+   ahora compartan la misma familia: sin eso, un título y su descripción se
+   confundirían al ser la misma letra. */
 h3 {
   font-size: clamp(1.3rem, 1.15rem + 0.7vw, 1.55rem);
   line-height: 1.22;
@@ -865,13 +846,6 @@ a:hover { text-decoration-color: var(--acento); }
   font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
 }
 
-/* Toda la ficha de un socio —nombre, credenciales y biografía— en una sola
-   familia, la misma serif de los títulos. Antes el nombre iba en Caslon y
-   el cuerpo en la sans: dos fuentes en la misma tarjeta. Ahora es una. */
-.socio p, .socio__credenciales {
-  font-family: "Libre Caslon Display", Georgia, "Times New Roman", serif;
-}
-
 /* Las credenciales van en una línea propia bajo el nombre, no en una
    versalita suelta: la sección ya se titula «Socios». Mismo color y tamaño
    que el resto de los párrafos, para que toda la sección lea con un solo
@@ -906,7 +880,6 @@ a:hover { text-decoration-color: var(--acento); }
 }
 
 .datos__rotulo {
-  font-family: "Archivo", sans-serif;
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.16em;
@@ -1010,7 +983,6 @@ a:hover { text-decoration-color: var(--acento); }
 }
 
 .pie__rotulo {
-  font-family: "Archivo", sans-serif;
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.16em;

@@ -1,18 +1,17 @@
-TIPOGRAFÍAS DE ESTE SITIO
-=========================
+TIPOGRAFÍA DE ESTE SITIO
+========================
 
 Libre Caslon Display
   Diseño: Pablo Impallari y Rodrigo Fuenzalida (Impallari Type).
   Licencia: SIL Open Font License, versión 1.1.
   Origen: https://fonts.google.com/specimen/Libre+Caslon+Display
 
-Archivo
-  Diseño: Omnibus-Type (Héctor Gatti y equipo).
-  Licencia: SIL Open Font License, versión 1.1.
-  Origen: https://fonts.google.com/specimen/Archivo
+Es la única familia del sitio: se usa tanto en los títulos como en el
+texto corrido. Hasta septiembre de 2026 el cuerpo de texto iba en Archivo,
+una sans distinta; se retiró para que toda la página use una sola letra.
 
-La SIL Open Font License 1.1 permite usar, incrustar y redistribuir estas
-fuentes, incluso en proyectos comerciales, siempre que no se vendan por
+La SIL Open Font License 1.1 permite usar, incrustar y redistribuir esta
+fuente, incluso en proyectos comerciales, siempre que no se venda por
 separado y se conserve este aviso. Texto completo de la licencia:
 https://openfontlicense.org/open-font-license-official-text/
 
