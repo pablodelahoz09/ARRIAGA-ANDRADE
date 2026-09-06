@@ -843,6 +843,24 @@ a:hover { text-decoration-color: var(--acento); }
   gap: clamp(2.25rem, 5vw, 3.5rem);
 }
 
+/* Retratos reales de personas reales: se dejan en color, a diferencia de
+   la fotografía ilustrativa del resto del sitio (manos, documentos), que
+   es la que va en blanco y negro. Cuadrados, esquina redondeada, nunca un
+   círculo — la firma pidió sobriedad, no un avatar de red social. */
+.socio__foto {
+  width: clamp(5.5rem, 14vw, 7rem);
+  margin: 0 0 1.25rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.socio__foto img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 .socio h3 {
   font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
 }
@@ -897,6 +915,14 @@ a:hover { text-decoration-color: var(--acento); }
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0.25rem 1.5rem;
+}
+
+.datos__nombre {
+  flex-basis: 100%;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
 }
 
 .datos__linea + .datos__linea { margin-top: 0.5rem; }

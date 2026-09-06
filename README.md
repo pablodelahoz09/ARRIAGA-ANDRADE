@@ -114,26 +114,56 @@ Y en la ficha del final:
 
 ## 5. Cambiar una foto
 
-Hay dos fotos y las dos son de manos y documentos, sin rostros.
+Hay dos familias de fotos, con reglas distintas.
 
-- `img/fuero-764.jpg` y `img/fuero-480.jpg` — la foto de la sección de fuero
-  sindical. Son **la misma imagen en dos tamaños**; hay que reemplazar las dos.
-- `img/fuero-764.webp` y `img/fuero-480.webp` — la misma foto en un formato más
-  liviano. Si no sabe generarlas, bórrelas: el sitio usa los `.jpg` solo.
-- `img/hero-610.jpg` y `.webp` — la foto de la portada. Solo se ve en
-  computador; en celular no se descarga siquiera.
+### 5.1 Las fotos ilustrativas (manos, documentos)
+
+Son seis, todas en blanco y negro, todas con la misma proporción cuadrada
+(4:5) salvo la de portada y la banda de cierre. Cada una tiene un archivo
+`.jpg` y uno `.webp` en dos tamaños (uno para celular, uno más grande para
+computador):
+
+| Sección | Archivos |
+|---|---|
+| Portada | `hero-620.jpg` / `.webp` — solo se ve en computador |
+| La firma | `firma-380` y `firma-610` |
+| Instrumentos internos | `instrumentos-380` y `instrumentos-531` |
+| Fuero sindical | `fuero-380` y `fuero-610` |
+| Casación | `casacion-380` y `casacion-500` |
+| Banda antes de Contacto | `cierre-800` y `cierre-1600` |
 
 La foto nueva debe:
 
-- ser horizontal, de **764 × 573 píxeles** (la de fuero) o vertical de
-  **610 × 980** (la de portada);
-- estar en blanco y negro y ser oscura;
+- tener **la misma proporción** que la que reemplaza (cuadrada 4:5, salvo
+  portada y banda, que son verticales/panorámicas);
+- estar en blanco y negro y ser oscura, para que combine con las demás;
 - pesar menos de 60 KB;
-- llamarse **exactamente igual** que la que reemplaza.
+- llamarse **exactamente igual** que la que reemplaza, con sus dos tamaños.
 
-> Si cambia el tamaño de la foto de fuero, avise: hay dos números
-> (`width="764" height="573"`) en `index.html` que hay que actualizar para que
+Si no sabe generar el archivo `.webp`, no pasa nada: bórrelo y deje solo el
+`.jpg`; el sitio funciona igual, un poco más pesado.
+
+> Si cambia las dimensiones de una foto, avise: hay números `width` y
+> `height` en `index.html` junto a cada una, que hay que actualizar para que
 > la página no dé un salto al cargar.
+
+### 5.2 Los retratos de los socios
+
+Son dos: `img/socio-hector-320`/`-480` y `img/socio-felipe-320`/`-480`,
+cada uno en `.jpg` y `.webp`. A diferencia de las anteriores, **van en color**:
+son personas reales, no fotografía ilustrativa.
+
+La foto nueva debe:
+
+- ser **cuadrada**;
+- pesar menos de 30 KB;
+- llamarse igual que la que reemplaza.
+
+El recorte a esquina redondeada y el tamaño en pantalla los pone el sitio
+solo; no hay que preparar nada de eso en la foto.
+
+> **Los dos retratos van juntos o ninguno.** Un socio con foto y el otro sin
+> ella se lee como una jerarquía que nadie quiso hacer.
 
 ---
 
@@ -254,9 +284,11 @@ Cada punto tiene ya su lugar marcado con un comentario dentro de `index.html`.
 
 **Mejora mucho el sitio**
 
-11. **Retratos de los dos socios.** Blanco y negro, mismo fondo, misma luz,
-    mismo encuadre a la altura del pecho. **Los dos o ninguno:** un socio con
-    foto y el otro sin ella se lee como jerarquía involuntaria.
+11. ~~Retratos de los dos socios.~~ **Resuelto** el 6/9/2026: los dos
+    retratos ya están en el sitio, en formato cuadrado con esquina
+    redondeada. Quedaron en color, a diferencia del resto de la fotografía
+    del sitio —que es ilustrativa (manos, documentos) y por eso va en blanco
+    y negro—: un retrato real de una persona real se trata distinto.
 12. **Dirección de la oficina**, razón social, NIT y LinkedIn para el pie.
 13. **Sectores o tipos de empresa** que atiende, sin nombrar clientes.
 14. **¿Notas periódicas o preguntas frecuentes?** Un blog con la última

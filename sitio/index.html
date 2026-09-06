@@ -447,11 +447,19 @@
     <div class="contenedor">
       <h2 id="socios-titulo">Socios</h2>
 
-      <!-- Cuando lleguen los retratos, cada socio admite una fotografía sobre el
-           nombre. Los dos o ninguno: uno con foto y otro sin ella se lee como
-           jerarquía involuntaria. Ver README.md, punto 10. -->
       <div class="socios">
         <article class="socio">
+      <figure class="socio__foto">
+        <picture>
+          <source type="image/webp" srcset="img/socio-hector-320.webp 320w, img/socio-hector-480.webp 480w"
+                  sizes="(min-width: 46rem) 7rem, 22vw">
+          <img src="img/socio-hector-480.jpg"
+               srcset="img/socio-hector-320.jpg 320w, img/socio-hector-480.jpg 480w"
+               sizes="(min-width: 46rem) 7rem, 22vw"
+               width="480" height="480" loading="lazy" decoding="async"
+               alt="Retrato de Héctor Arriaga Díaz.">
+        </picture>
+      </figure>
           <h3>Héctor Arriaga Díaz</h3>
           <p class="socio__credenciales">Socio fundador · Magistrado (r.) · Conjuez ·
              Árbitro de la lista de la Corte Suprema · Cátedra en el Rosario</p>
@@ -473,6 +481,17 @@
         </article>
 
         <article class="socio">
+      <figure class="socio__foto">
+        <picture>
+          <source type="image/webp" srcset="img/socio-felipe-320.webp 320w, img/socio-felipe-480.webp 480w"
+                  sizes="(min-width: 46rem) 7rem, 22vw">
+          <img src="img/socio-felipe-480.jpg"
+               srcset="img/socio-felipe-320.jpg 320w, img/socio-felipe-480.jpg 480w"
+               sizes="(min-width: 46rem) 7rem, 22vw"
+               width="480" height="480" loading="lazy" decoding="async"
+               alt="Retrato de Felipe Arriaga Calle.">
+        </picture>
+      </figure>
           <h3>Felipe Arriaga Calle</h3>
           <p class="socio__credenciales">Socio · Universidad de La Sabana ·
              Especialista en Derecho Laboral y Seguridad Social ·
@@ -536,34 +555,39 @@
 
       <!-- ╔═══════════════════════════════════════════════════════════════╗
            ║  DATOS DE CONTACTO (1 de 3)                                   ║
-           ║  Si cambia un teléfono o un correo aquí, cámbielo también en  ║
-           ║  el pie de página y en el bloque JSON-LD del final.           ║
+           ║  Orden fijo: Héctor primero, Felipe segundo — el mismo orden  ║
+           ║  que en «Socios». Si cambia un teléfono o un correo aquí,     ║
+           ║  cámbielo también en el pie de página y en el JSON-LD final.  ║
            ║  En los teléfonos hay que cambiar TRES cosas: el texto que    ║
            ║  se ve, el href="tel:..." y el href="https://wa.me/..."       ║
            ║                                                               ║
-           ║  El segundo número NO lleva WhatsApp porque no está           ║
-           ║  confirmado. Para añadirlo, copie la línea datos__secundario  ║
-           ║  del primero y cambie el número.                              ║
+           ║  Solo el número de Felipe (314) lleva WhatsApp confirmado.    ║
+           ║  Para añadirlo también al de Héctor, copie la línea           ║
+           ║  datos__secundario y cambie el número.                        ║
            ╚═══════════════════════════════════════════════════════════════╝ -->
       <div class="datos">
         <div class="datos__grupo">
           <h3 class="datos__rotulo">Teléfonos</h3>
           <p class="datos__linea">
-            <a class="datos__principal" href="tel:+573144116744">+57 314 411 6744</a>
-            <a class="datos__secundario" href="https://wa.me/573144116744">WhatsApp</a>
+            <span class="datos__nombre">Héctor Arriaga Díaz</span>
+            <a class="datos__principal" href="tel:+573153312222">+57 315 331 2222</a>
           </p>
           <p class="datos__linea">
-            <a class="datos__principal" href="tel:+573153312222">+57 315 331 2222</a>
+            <span class="datos__nombre">Felipe Arriaga Calle</span>
+            <a class="datos__principal" href="tel:+573144116744">+57 314 411 6744</a>
+            <a class="datos__secundario" href="https://wa.me/573144116744">WhatsApp</a>
           </p>
         </div>
 
         <div class="datos__grupo">
           <h3 class="datos__rotulo">Correo</h3>
           <p class="datos__linea">
-            <a class="datos__correo" href="mailto:felipe.arriaga@arriagaandrade.com?subject=Consulta%20laboral%20%E2%80%94%20sitio%20web">felipe.arriaga@arriagaandrade.com</a>
+            <span class="datos__nombre">Héctor Arriaga Díaz</span>
+            <a class="datos__correo" href="mailto:hector.arriaga@arriagaandrade.com?subject=Consulta%20laboral%20%E2%80%94%20sitio%20web">hector.arriaga@arriagaandrade.com</a>
           </p>
           <p class="datos__linea">
-            <a class="datos__correo" href="mailto:hector.arriaga@arriagaandrade.com?subject=Consulta%20laboral%20%E2%80%94%20sitio%20web">hector.arriaga@arriagaandrade.com</a>
+            <span class="datos__nombre">Felipe Arriaga Calle</span>
+            <a class="datos__correo" href="mailto:felipe.arriaga@arriagaandrade.com?subject=Consulta%20laboral%20%E2%80%94%20sitio%20web">felipe.arriaga@arriagaandrade.com</a>
           </p>
         </div>
       </div>
@@ -587,10 +611,10 @@
          ╚═══════════════════════════════════════════════════════════════╝ -->
     <div class="pie__bloque">
       <h2 class="pie__rotulo">Contacto</h2>
-      <p><a href="tel:+573144116744">+57 314 411 6744</a></p>
       <p><a href="tel:+573153312222">+57 315 331 2222</a></p>
-      <p><a href="mailto:felipe.arriaga@arriagaandrade.com?subject=Consulta%20laboral%20%E2%80%94%20sitio%20web">felipe.arriaga@arriagaandrade.com</a></p>
+      <p><a href="tel:+573144116744">+57 314 411 6744</a></p>
       <p><a href="mailto:hector.arriaga@arriagaandrade.com?subject=Consulta%20laboral%20%E2%80%94%20sitio%20web">hector.arriaga@arriagaandrade.com</a></p>
+      <p><a href="mailto:felipe.arriaga@arriagaandrade.com?subject=Consulta%20laboral%20%E2%80%94%20sitio%20web">felipe.arriaga@arriagaandrade.com</a></p>
     </div>
 
     <div class="pie__bloque">
@@ -633,8 +657,8 @@
   "url": "https://www.arriagaandrade.com/",
   "image": "https://www.arriagaandrade.com/img/og.jpg",
   "slogan": "Prevención. Estrategia. Defensa.",
-  "telephone": ["+573144116744", "+573153312222"],
-  "email": ["felipe.arriaga@arriagaandrade.com", "hector.arriaga@arriagaandrade.com"],
+  "telephone": ["+573153312222", "+573144116744"],
+  "email": ["hector.arriaga@arriagaandrade.com", "felipe.arriaga@arriagaandrade.com"],
   "areaServed": { "@type": "Country", "name": "Colombia" },
   "knowsLanguage": "es-CO",
   "member": [
