@@ -848,7 +848,7 @@ a:hover { text-decoration-color: var(--acento); }
    es la que va en blanco y negro. Cuadrados, esquina redondeada, nunca un
    círculo — la firma pidió sobriedad, no un avatar de red social. */
 .socio__foto {
-  width: clamp(6.6rem, 16.8vw, 8.4rem);  /* 20% más grande que el tamaño original */
+  width: clamp(8.25rem, 21vw, 10.5rem);  /* +25% sobre el +20% anterior: 150% del tamaño original */
   margin: 0 0 1.25rem;
   border-radius: 0.75rem;
   overflow: hidden;
@@ -865,10 +865,17 @@ a:hover { text-decoration-color: var(--acento); }
   font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
 }
 
+/* Toda la ficha de un socio —nombre, credenciales y biografía— en una sola
+   familia, la misma serif de los títulos. Antes el nombre iba en Caslon y
+   el cuerpo en la sans: dos fuentes en la misma tarjeta. Ahora es una. */
+.socio p, .socio__credenciales {
+  font-family: "Libre Caslon Display", Georgia, "Times New Roman", serif;
+}
+
 /* Las credenciales van en una línea propia bajo el nombre, no en una
-   versalita suelta: la sección ya se titula «Socios». Misma tipografía que
-   el resto de los párrafos de la ficha: sin color de acento ni tamaño
-   propio, para que toda la sección lea con un solo tratamiento. */
+   versalita suelta: la sección ya se titula «Socios». Mismo color y tamaño
+   que el resto de los párrafos, para que toda la sección lea con un solo
+   tratamiento. */
 .socio__credenciales {
   margin-top: 0.5rem;
   margin-bottom: 1.25rem;
